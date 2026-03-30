@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, TreePine, Phone } from "lucide-react";
 import { useSiteSettings } from "@/hooks/use-site-settings";
@@ -25,10 +25,18 @@ export function TopNav() {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { settings } = useSiteSettings();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b" data-testid="top-nav">
+    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b transition-shadow duration-300 ${scrolled ? "shadow-[0_4px_12px_rgba(0,0,0,0.08)]" : ""}`} data-testid="top-nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between min-h-24 py-2 gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0 py-1" data-testid="link-home-logo">
