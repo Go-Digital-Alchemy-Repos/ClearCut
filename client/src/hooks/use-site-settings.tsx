@@ -8,7 +8,7 @@ const DEFAULT_SETTINGS: Omit<SiteSettings, "id" | "updatedAt"> = {
   email: "info@brushboss.com",
   serviceArea: "Charlotte, NC & Surrounding Areas",
   logoUrl: null,
-  primaryColor: "28 65% 42%",
+  primaryColor: "215 90% 50%",
   secondaryColor: "85 35% 38%",
   fontFamily: "Inter",
   ctaText: "Get a Fast Quote",

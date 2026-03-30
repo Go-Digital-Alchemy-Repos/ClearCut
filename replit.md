@@ -4,7 +4,7 @@
 Forestry Boss is a full-stack web application for a professional forestry mulching and land clearing business. It targets the Charlotte, North Carolina area and features a comprehensive administrative portal. The application aims to streamline lead management, content creation, and site branding, all while focusing on SEO-driven content and a problem/solution messaging style focused on forestry mulching benefits. Key capabilities include CRM lead management, a blog CMS, site-wide branding customization, and a comprehensive CMS with advanced page-building features. The project's ambition is to provide a robust online presence to support business growth and efficient operations.
 
 ## User Preferences
-- Brand color: Earth tones / warm brown (configurable)
+- Brand color: Professional blue (HSL 215 90% 50%, configurable via admin branding)
 - Target area: Charlotte, NC & surrounding counties (50mi radius)
 - Modern, beautiful, engaging design
 - SEO-driven content with local keywords
