@@ -295,7 +295,7 @@ Managed via site_settings table (single row) and the /admin/branding page.
 **Configurable Values:**
 - Company name, phone, email, service area
 - Logo URL
-- Primary color (HSL format: "215 90% 50%")
+- Primary color (HSL format: "28 65% 42%")
 - Secondary color (HSL format: "85 35% 38%")
 - Font family (default: Inter)
 - CTA button text

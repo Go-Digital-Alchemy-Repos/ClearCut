@@ -126,7 +126,7 @@ export default function Home() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.35) 100%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
           <div className="max-w-2xl space-y-6 animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-white" style={{ background: "linear-gradient(135deg, hsl(215 90% 50% / 0.6), hsl(85 35% 38% / 0.5))" }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-white" style={{ background: "linear-gradient(135deg, hsl(28 65% 42% / 0.6), hsl(85 35% 38% / 0.5))" }}>
               <MapPin className="h-4 w-4" />
               <span>Serving Charlotte, NC & 50-Mile Radius</span>
             </div>

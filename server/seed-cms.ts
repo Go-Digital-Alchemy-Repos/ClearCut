@@ -405,12 +405,12 @@ const THEME_PRESETS = [
   {
     key: "forestry-pro",
     name: "Forestry Pro",
-    description: "Brand colors from the Forestry Boss logo: Green, Blue, and Slate.",
+    description: "Brand colors from the Forestry Boss logo: Green, Orange, and Slate.",
     isSystem: true,
     isActive: true,
     tokens: {
       colors: { 
-        primary: "215 90% 50%", 
+        primary: "24 97% 46%", 
         secondary: "137 38% 21%", 
         accent: "215 15% 45%", 
         bg: "210 20% 98%", 
