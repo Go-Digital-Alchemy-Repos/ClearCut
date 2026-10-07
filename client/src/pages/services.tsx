@@ -11,14 +11,14 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 export default function Services() {
   usePageMeta({
-    title: "Forestry Mulching & Land Clearing Services | Brush Boss Charlotte, NC",
-    description: "Brush Boss offers forestry mulching, trail cutting, hillside mulching, brush hogging, fence line clearing, and invasive growth removal across the Charlotte, NC area.",
+    title: "Forestry Mulching & Land Clearing Services | Clearcut Land Management Charlotte, NC",
+    description: "Clearcut Land Management offers forestry mulching, trail cutting, hillside mulching, brush hogging, fence line clearing, and invasive growth removal across the Charlotte, NC area.",
     canonicalUrl: "/services",
     jsonLd: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "Land Clearing Services",
-      "description": "Professional land clearing and forestry mulching services offered by Brush Boss in the Charlotte, NC area.",
+      "description": "Professional land clearing and forestry mulching services offered by Clearcut Land Management in the Charlotte, NC area.",
       "numberOfItems": 6,
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Forestry Mulching", "url": `${window.location.origin}/services/forestry-mulching` },
@@ -46,7 +46,7 @@ export default function Services() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight" data-testid="text-services-title">
             Land Clearing Services
             <br />
-            <span className="text-primary">in Charlotte, NC</span>
+            <span className="text-gold">in Charlotte, NC</span>
           </h1>
           <p className="mt-4 text-gray-200 max-w-2xl mx-auto text-lg">
             From overgrown lots to steep hillsides, we bring the right equipment to every job across Mecklenburg, Union, and Cabarrus Counties.
@@ -117,10 +117,10 @@ export default function Services() {
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="tel:+17046085783" data-testid="link-services-phone">
+            <a href="tel:+19513160826" data-testid="link-services-phone">
               <Button size="lg" variant="outline" className="gap-2 text-base bg-white/10 backdrop-blur-sm text-white border-white/25">
                 <Phone className="h-4 w-4" />
-                (704) 608-5783
+                (951) 316-0826
               </Button>
             </a>
           </div>

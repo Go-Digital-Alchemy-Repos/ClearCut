@@ -8,7 +8,8 @@ import type { AdminRole } from "@shared/schema";
 import { storage } from "./storage";
 
 const LEGACY_ADMIN_USERNAME = "admin";
-const LEGACY_ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "forestryboss2026";
+const LEGACY_ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const DEFAULT_ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@clearcutlandmanagement.com";
 
 declare global {
   namespace Express {
@@ -42,7 +43,7 @@ export function setupAuth(app: Express) {
 
   passport.use(
     new LocalStrategy(async (username, password, done) => {
-      if (username === LEGACY_ADMIN_USERNAME && password === LEGACY_ADMIN_PASSWORD) {
+      if (LEGACY_ADMIN_PASSWORD && username === LEGACY_ADMIN_USERNAME && password === LEGACY_ADMIN_PASSWORD) {
         return done(null, { id: "legacy-admin", username: LEGACY_ADMIN_USERNAME, role: "super_admin" as AdminRole });
       }
 
@@ -101,17 +102,21 @@ export function requireRole(allowedRoles: AdminRole[]): RequestHandler {
 }
 
 export async function seedDefaultAdmin() {
+  if (!LEGACY_ADMIN_PASSWORD) {
+    console.warn("ADMIN_PASSWORD is not set; skipping default admin seed.");
+    return;
+  }
   try {
-    const existing = await storage.getAdminUserByEmail("admin@brushboss.com");
+    const existing = await storage.getAdminUserByEmail(DEFAULT_ADMIN_EMAIL);
     if (!existing) {
       const hash = await bcrypt.hash(LEGACY_ADMIN_PASSWORD, 10);
       await storage.createAdminUser({
-        email: "admin@brushboss.com",
+        email: DEFAULT_ADMIN_EMAIL,
         passwordHash: hash,
         displayName: "Super Admin",
         role: "super_admin",
       });
-      console.log("Seeded default super admin user: admin@brushboss.com");
+      console.log(`Seeded default super admin user: ${DEFAULT_ADMIN_EMAIL}`);
     }
   } catch (err) {
     console.error("Failed to seed default admin:", err);

@@ -12,11 +12,11 @@ const SYSTEM_BLOCKS = [
     isSystem: true,
     defaultProps: {
       headline: "Professional Land Clearing & Forestry Mulching",
-      subheadline: "Forestry Boss delivers expert brush clearing, forestry mulching, and land management across the Charlotte, NC region.",
+      subheadline: "Clearcut Land Management delivers expert brush clearing, forestry mulching, and land management across the Charlotte, NC region.",
       primaryCtaText: "Get a Free Quote",
       primaryCtaHref: "/quote",
       imageUrl: "/images/hero-land-clearing.jpg",
-      imageAlt: "Forestry Boss forestry mulching equipment clearing overgrown property",
+      imageAlt: "Clearcut Land Management forestry mulching equipment clearing overgrown property",
     },
     schema: {
       fields: [
@@ -54,7 +54,7 @@ const SYSTEM_BLOCKS = [
     isSystem: true,
     defaultProps: {
       imageUrl: "/images/banner-clearing-site.jpg",
-      alt: "Cleared property by Brush Boss in Charlotte NC",
+      alt: "Cleared property by Clearcut Land Management in Charlotte NC",
       overlayText: "Transforming Overgrown Land Into Usable Space",
       height: "md",
     },
@@ -75,7 +75,7 @@ const SYSTEM_BLOCKS = [
     description: "Grid of feature cards with icons, titles, and descriptions.",
     isSystem: true,
     defaultProps: {
-      heading: "Why Choose Brush Boss?",
+      heading: "Why Choose Clearcut?",
       subheading: "We bring the right equipment, experience, and work ethic to every job across the Charlotte metro area.",
       features: [
         { title: "Heavy-Duty Equipment", description: "Commercial-grade forestry mulchers and track loaders handle the toughest terrain.", icon: "Truck" },
@@ -142,9 +142,9 @@ const SYSTEM_BLOCKS = [
     defaultProps: {
       heading: "What Our Customers Say",
       testimonials: [
-        { text: "Brush Boss cleared 3 acres of overgrown brush in a single day. The property looks incredible and the mulch ground cover is already holding the soil in place.", name: "Mike R.", location: "Waxhaw, NC" },
+        { text: "Clearcut Land Management cleared 3 acres of overgrown brush in a single day. The property looks incredible and the mulch ground cover is already holding the soil in place.", name: "Mike R.", location: "Waxhaw, NC" },
         { text: "Professional crew, serious equipment, and fair pricing. They cut trails through our back 5 acres and the access lanes are perfect for our UTVs.", name: "Sarah T.", location: "Mooresville, NC" },
-        { text: "We had a nightmare of kudzu and privet along our fence line. Brush Boss knocked it all out and the fence is visible again for the first time in years.", name: "James K.", location: "Indian Trail, NC" },
+        { text: "We had a nightmare of kudzu and privet along our fence line. Clearcut Land Management knocked it all out and the fence is visible again for the first time in years.", name: "James K.", location: "Indian Trail, NC" },
       ],
     },
     schema: {
@@ -260,8 +260,8 @@ const SYSTEM_BLOCKS = [
     defaultProps: {
       heading: "Get In Touch",
       description: "Have questions about your property or need an estimate? Reach out and we'll get back to you within 24 hours.",
-      phone: "(704) 608-5783",
-      email: "info@brushboss.com",
+      phone: "(951) 316-0826",
+      email: "info@clearcutlandmanagement.com",
       buttonText: "Request a Quote",
       buttonHref: "/quote",
     },
@@ -305,7 +305,7 @@ const SYSTEM_BLOCKS = [
     isSystem: true,
     defaultProps: {
       headline: "Before & After: Real Results",
-      subheadline: "See how Forestry Boss transforms overgrown land into clean, usable space.",
+      subheadline: "See how Clearcut Land Management transforms overgrown land into clean, usable space.",
       layout: "compare",
       items: [
         {
@@ -404,20 +404,20 @@ const SYSTEM_BLOCKS = [
 const THEME_PRESETS = [
   {
     key: "forestry-pro",
-    name: "Forestry Pro",
-    description: "Brand colors from the Forestry Boss logo: Green, Orange, and Slate.",
+    name: "Clearcut Brand",
+    description: "Clearcut palette: Forest Green, Earth Gold, Charcoal, and Warm Ivory.",
     isSystem: true,
     isActive: true,
     tokens: {
-      colors: { 
-        primary: "24 97% 46%", 
-        secondary: "137 38% 21%", 
-        accent: "215 15% 45%", 
-        bg: "210 20% 98%", 
-        surface: "0 0% 100%", 
-        text: "215 25% 15%" 
+      colors: {
+        primary: "153 54% 15%",
+        secondary: "42 52% 43%",
+        accent: "150 4% 18%",
+        bg: "48 33% 97%",
+        surface: "0 0% 100%",
+        text: "150 4% 18%"
       },
-      font: { family: "Inter", headingsWeight: "700", bodyWeight: "400" },
+      font: { family: "Inter", headingFamily: "Barlow Condensed", headingsWeight: "700", bodyWeight: "400" },
       radius: { card: "0.5rem", button: "0.375rem" },
       shadow: { card: "0 1px 3px rgba(0,0,0,0.1)", button: "0 1px 2px rgba(0,0,0,0.05)" },
       components: { buttonStyle: "solid", navStyle: "transparent" },

@@ -1,3 +1,4 @@
+import "./env";
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
@@ -25,6 +26,12 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: false }));
+
+// Pre-launch: keep search engines from indexing anything. Remove at launch.
+app.use((_req, res, next) => {
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+  next();
+});
 
 setupAuth(app);
 
@@ -96,16 +103,14 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
+  // Serve both the API and the client on PORT (set by the host in production).
   const port = parseInt(process.env.PORT || "5000", 10);
   httpServer.listen(
     {
       port,
       host: "0.0.0.0",
-      reusePort: true,
+      // SO_REUSEPORT is unsupported on macOS; only enable it on Linux.
+      reusePort: process.platform === "linux",
     },
     () => {
       log(`serving on port ${port}`);

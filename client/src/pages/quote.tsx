@@ -85,7 +85,7 @@ interface FormData {
 
 export default function Quote() {
   usePageMeta({
-    title: "Get a Quote | Forestry Boss",
+    title: "Get a Quote | Clearcut Land Management",
     description: "Request a fast quote for forestry mulching, trail cutting, hillside clearing, brush hogging, fence line clearing, and invasive growth removal in the Charlotte area.",
     canonicalUrl: "/quote",
   });
@@ -337,7 +337,7 @@ export default function Quote() {
                               type="tel"
                               value={formData.phone}
                               onChange={(e) => updateField("phone", e.target.value)}
-                              placeholder="(704) 608-5783"
+                              placeholder="(704) 555-0123"
                               data-testid="input-phone"
                             />
                             {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
@@ -659,14 +659,14 @@ export default function Quote() {
                       <Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                       <div>
                         <div className="font-medium">Phone</div>
-                        <div className="text-muted-foreground">(704) 608-5783</div>
+                        <div className="text-muted-foreground">(951) 316-0826</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 text-sm">
                       <Mail className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                       <div>
                         <div className="font-medium">Email</div>
-                        <div className="text-muted-foreground">info@forestryboss.com</div>
+                        <div className="text-muted-foreground">info@clearcutlandmanagement.com</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 text-sm">

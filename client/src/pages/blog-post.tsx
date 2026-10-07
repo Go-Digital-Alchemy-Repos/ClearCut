@@ -64,7 +64,7 @@ export default function BlogPostPage() {
     enabled: !!slug && !!post,
   });
 
-  const pageTitle = post?.metaTitle || (post ? `${post.title} | Forestry Boss Blog` : "Blog | Forestry Boss Charlotte, NC");
+  const pageTitle = post?.metaTitle || (post ? `${post.title} | Clearcut Land Management Blog` : "Blog | Clearcut Land Management Charlotte, NC");
   const pageDescription = post?.metaDescription || post?.excerpt || "Expert tips and guides about land clearing in Charlotte, NC.";
   const pageCanonical = post?.canonicalUrl || `/blog/${slug}`;
   const pageOgImage = post?.ogImageUrl || post?.featuredImageUrl || undefined;
@@ -82,10 +82,10 @@ export default function BlogPostPage() {
       "description": post.metaDescription || post.excerpt,
       "datePublished": post.publishedAt,
       "dateModified": post.updatedAt || post.publishedAt,
-      "author": { "@type": "Organization", "name": "Forestry Boss" },
+      "author": { "@type": "Organization", "name": "Clearcut Land Management" },
       "publisher": {
         "@type": "Organization",
-        "name": "Forestry Boss",
+        "name": "Clearcut Land Management",
         "url": window.location.origin
       },
       "mainEntityOfPage": {
@@ -163,7 +163,7 @@ export default function BlogPostPage() {
               <CardContent className="p-6 text-center">
                 <h3 className="font-semibold text-lg">Ready to Clear Your Property?</h3>
                 <p className="text-sm text-muted-foreground mt-2 mb-4">
-                  Get a free, no-obligation quote from Forestry Boss. We serve Charlotte, NC and surrounding areas within a 50-mile radius.
+                  Get a free, no-obligation quote from Clearcut Land Management. We serve Charlotte, NC and surrounding areas within a 50-mile radius.
                 </p>
                 <Link href="/quote">
                   <Button data-testid="blog-cta-quote">Get a Free Quote</Button>

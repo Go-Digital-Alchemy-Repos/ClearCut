@@ -149,7 +149,7 @@ export default function AdminBlogEditor() {
     },
   });
 
-  const effectiveMetaTitle = metaTitle || (title ? `${title} | Forestry Boss Blog` : "");
+  const effectiveMetaTitle = metaTitle || (title ? `${title} | Clearcut Land Management Blog` : "");
   const effectiveMetaDesc = metaDescription || excerpt;
   const metaTitleLen = effectiveMetaTitle.length;
   const metaDescLen = effectiveMetaDesc.length;
@@ -318,7 +318,7 @@ export default function AdminBlogEditor() {
                       id="metaTitle"
                       value={metaTitle}
                       onChange={(e) => setMetaTitle(e.target.value)}
-                      placeholder={title ? `${title} | Forestry Boss Blog` : "Custom page title for search engines"}
+                      placeholder={title ? `${title} | Clearcut Land Management Blog` : "Custom page title for search engines"}
                       data-testid="input-meta-title"
                     />
                     <div className="flex items-center justify-between gap-2 mt-1">
@@ -380,10 +380,10 @@ export default function AdminBlogEditor() {
                       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Search Preview</p>
                       <div className="space-y-1" data-testid="div-search-preview">
                         <p className="text-sm text-blue-600 dark:text-blue-400 truncate font-medium">
-                          {effectiveMetaTitle || "Post Title | Forestry Boss Blog"}
+                          {effectiveMetaTitle || "Post Title | Clearcut Land Management Blog"}
                         </p>
                         <p className="text-xs text-green-700 dark:text-green-500 truncate">
-                          forestryboss.com/blog/{slug || "..."}
+                          clearcutlandmanagement.com/blog/{slug || "..."}
                         </p>
                         <p className="text-xs text-muted-foreground line-clamp-2">
                           {effectiveMetaDesc || "Enter an excerpt or meta description to see a preview..."}

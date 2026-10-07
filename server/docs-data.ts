@@ -781,7 +781,7 @@ Ideal for the homepage or location-specific landing pages.
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Brush Boss",
+  "name": "Clearcut Land Management",
   "description": "...",
   "url": "/",
   "telephone": "",
@@ -806,7 +806,7 @@ For individual service pages (forestry mulching, trail cutting, etc.).
   "@type": "Service",
   "name": "Forestry Mulching",
   "description": "...",
-  "provider": { "@type": "LocalBusiness", "name": "Brush Boss" },
+  "provider": { "@type": "LocalBusiness", "name": "Clearcut Land Management" },
   "areaServed": { "@type": "City", "name": "Charlotte, NC" }
 }
 \`\`\`
@@ -822,7 +822,7 @@ For blog-style content pages.
   "@type": "Article",
   "headline": "...",
   "description": "...",
-  "author": { "@type": "Organization", "name": "Brush Boss" }
+  "author": { "@type": "Organization", "name": "Clearcut Land Management" }
 }
 \`\`\`
 
@@ -851,7 +851,7 @@ When a page with JSON-LD is rendered, the \`usePageMeta\` hook injects a \`<scri
 
 **Format:**
 \`\`\`
-PUBLIC_SITE_URL=https://forestryboss.com
+PUBLIC_SITE_URL=https://clearcutlandmanagement.com
 \`\`\`
 - Must include the protocol (\`https://\`)
 - Must NOT include a trailing slash
@@ -861,9 +861,8 @@ PUBLIC_SITE_URL=https://forestryboss.com
 If \`PUBLIC_SITE_URL\` is not set, the application falls back to using the \`Host\` header from the incoming request prefixed with \`https://\`. This works for development but is unreliable for production (may use internal hostnames or load balancer addresses).
 
 **Setting the Variable:**
-1. Go to the Secrets panel in the Replit project
-2. Add \`PUBLIC_SITE_URL\` with your production domain
-3. The sitemap and robots.txt will immediately use the new value
+1. Add \`PUBLIC_SITE_URL\` to the service's environment variables in Railway
+2. Redeploy; the sitemap and robots.txt will use the new value
 
 **When to Set:**
 - Before deploying to production
@@ -1149,7 +1148,7 @@ export async function seedDocsEntries() {
       tags: entry.tags,
       related: [],
       version: "1.0",
-      author: "Brush Boss Engineering",
+      author: "Clearcut Engineering",
     });
     inserted++;
     existingSlugs.add(slug);

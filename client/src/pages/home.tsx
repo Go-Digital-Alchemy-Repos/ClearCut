@@ -44,7 +44,7 @@ const processSteps = [
   { step: "3", title: "We Clear It Clean", desc: "Our crew arrives, clears the land, and leaves your property clean and ready for whatever comes next." },
 ];
 
-const whyForestryBoss = [
+const whyClearcut = [
   { icon: TreePine, text: "Forestry mulching specialists — it's what we do best" },
   { icon: MapPin, text: "Locally owned and operated in the Charlotte metro" },
   { icon: HardHat, text: "Commercial-grade mulchers, brush hogs, and skid steers" },
@@ -59,7 +59,7 @@ const testimonials = [
     location: "Huntersville",
   },
   {
-    text: "We called Forestry Boss to clear fence lines on our horse property. They did exactly what they said they'd do, showed up on time, and the price was fair. Already booked them for a second project.",
+    text: "We called Clearcut to clear fence lines on our horse property. They did exactly what they said they'd do, showed up on time, and the price was fair. Already booked them for a second project.",
     name: "Laura S.",
     location: "Waxhaw",
   },
@@ -87,18 +87,18 @@ const serviceTowns = [
 
 export default function Home() {
   usePageMeta({
-    title: "Forestry Boss | Forestry Mulching & Land Clearing in Charlotte, NC",
-    description: "Forestry Boss provides forestry mulching, trail cutting, hillside clearing, brush hogging, fence line clearing, and invasive growth removal across the Charlotte, NC region. Fast quotes. Professional equipment.",
+    title: "Clearcut Land Management | Forestry Mulching & Land Clearing in Charlotte, NC",
+    description: "Clearcut Land Management provides forestry mulching, trail cutting, hillside clearing, brush hogging, fence line clearing, and invasive growth removal across the Charlotte, NC region. Fast quotes. Professional equipment.",
     canonicalUrl: "/",
     ogType: "website",
     jsonLd: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Forestry Boss",
+      "name": "Clearcut Land Management",
       "description": "Professional forestry mulching and land clearing services in Charlotte, NC and surrounding areas.",
       "url": window.location.origin,
-      "telephone": "(704) 608-5783",
-      "email": "info@forestryboss.com",
+      "telephone": "(951) 316-0826",
+      "email": "info@clearcutlandmanagement.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Charlotte",
@@ -126,14 +126,14 @@ export default function Home() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.35) 100%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
           <div className="max-w-2xl space-y-6 animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-white" style={{ background: "linear-gradient(135deg, hsl(28 65% 42% / 0.6), hsl(85 35% 38% / 0.5))" }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-white" style={{ background: "linear-gradient(135deg, hsl(var(--primary) / 0.85), hsl(var(--gold) / 0.6))" }}>
               <MapPin className="h-4 w-4" />
               <span>Serving Charlotte, NC & 50-Mile Radius</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight" data-testid="hero-heading">
               Clear Your Land.
               <br />
-              <span className="text-primary">Keep Your Soil.</span>
+              <span className="text-gold">Keep Your Soil.</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-xl" data-testid="hero-subtext">
               We grind brush, saplings, and overgrowth into mulch in a single pass — no hauling, no burn piles, no mess.
@@ -145,10 +145,10 @@ export default function Home() {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <a href="tel:+17046085783">
+              <a href="tel:+19513160826">
                 <Button size="lg" variant="outline" className="gap-2 text-base bg-white/10 backdrop-blur-sm text-white border-white/25" data-testid="hero-cta-call">
                   <Phone className="h-4 w-4" />
-                  (704) 608-5783
+                  (951) 316-0826
                 </Button>
               </a>
             </div>
@@ -297,13 +297,13 @@ export default function Home() {
             <div>
               <SectionHeaderPro
                 eyebrow="Why Choose Us"
-                title="Why Forestry Boss"
+                title="Why Clearcut"
                 align="left"
                 subtitle="We're not a general contractor who happens to own a mulcher. Forestry mulching and land clearing is all we do — and we've spent years building the equipment lineup, crew, and processes to do it better than anyone in the Charlotte area."
                 className="mb-8"
               />
               <div className="space-y-4">
-                {whyForestryBoss.map((b) => (
+                {whyClearcut.map((b) => (
                   <div key={b.text} className="flex gap-4 items-start">
                     <div className="h-10 w-10 shrink-0 rounded-md flex items-center justify-center" style={{ background: "linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05))" }}>
                       <b.icon className="h-5 w-5 text-primary" />
@@ -416,10 +416,10 @@ export default function Home() {
                 Get a Free Quote
               </Button>
             </Link>
-            <a href="tel:+17046085783">
+            <a href="tel:+19513160826">
               <Button size="lg" variant="outline" className="gap-2 text-base bg-white/10 backdrop-blur-sm text-white border-white/25" data-testid="cta-call">
                 <Phone className="h-4 w-4" />
-                Call (704) 608-5783
+                Call (951) 316-0826
               </Button>
             </a>
           </div>

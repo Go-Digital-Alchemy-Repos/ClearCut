@@ -3,13 +3,13 @@ import { useQuery } from "@tanstack/react-query";
 import type { SiteSettings } from "@shared/schema";
 
 const DEFAULT_SETTINGS: Omit<SiteSettings, "id" | "updatedAt"> = {
-  companyName: "Brush Boss",
-  phone: "(704) 608-5783",
-  email: "info@brushboss.com",
+  companyName: "Clearcut Land Management",
+  phone: "(951) 316-0826",
+  email: "info@clearcutlandmanagement.com",
   serviceArea: "Charlotte, NC & Surrounding Areas",
-  logoUrl: null,
-  primaryColor: "28 65% 42%",
-  secondaryColor: "85 35% 38%",
+  logoUrl: "/brand/clearcut-horizontal.svg",
+  primaryColor: "153 54% 15%",
+  secondaryColor: "42 52% 43%",
   fontFamily: "Inter",
   ctaText: "Get a Fast Quote",
   socialFacebook: null,

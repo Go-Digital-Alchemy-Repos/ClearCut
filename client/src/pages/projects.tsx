@@ -10,7 +10,7 @@ import type { CrmProject } from "@shared/schema";
 
 export default function Projects() {
   usePageMeta({
-    title: "Our Projects | Forestry Boss - Charlotte, NC Land Clearing Portfolio",
+    title: "Our Projects | Clearcut Land Management - Charlotte, NC Land Clearing Portfolio",
     description: "Explore before-and-after land clearing, brush removal, and forestry mulching projects across the Charlotte, NC region.",
   });
 

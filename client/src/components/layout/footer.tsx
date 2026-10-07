@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { TreePine, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useSiteSettings } from "@/hooks/use-site-settings";
 
@@ -32,9 +32,12 @@ export function Footer() {
             <div className="space-y-4">
               <Link href="/" className="flex items-center gap-2" data-testid="footer-logo">
                 {settings.logoUrl ? (
-                  <img src={settings.logoUrl} alt={settings.companyName} className="h-32 w-32 object-contain" />
+                  <img src={settings.logoUrl} alt={settings.companyName} className="h-14 w-auto max-w-full object-contain" />
                 ) : (
-                  <TreePine className="h-32 w-32 text-primary" />
+                  <span className="flex items-center gap-2">
+                    <img src="/brand/clearcut-symbol.svg" alt="" className="h-10 w-10" />
+                    <span className="font-bold text-lg leading-tight">{settings.companyName}</span>
+                  </span>
                 )}
               </Link>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -103,7 +106,7 @@ export function Footer() {
               <h3 className="font-semibold text-sm mb-4 uppercase tracking-wider text-muted-foreground">Contact</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="tel:+17046085783" className="flex items-start gap-2.5 text-sm hover:underline underline-offset-4">
+                  <a href="tel:+19513160826" className="flex items-start gap-2.5 text-sm hover:underline underline-offset-4">
                     <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                     <span data-testid="text-footer-phone">{settings.phone}</span>
                   </a>

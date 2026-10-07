@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { TreePine, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useAdminAuth } from "@/hooks/use-admin-auth";
 
 export default function AdminLogin() {
@@ -31,8 +31,7 @@ export default function AdminLogin() {
       <Card className="w-full max-w-sm">
         <CardContent className="p-6">
           <div className="flex items-center gap-2 mb-6 justify-center">
-            <TreePine className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg">Brush Boss</span>
+            <img src="/brand/clearcut-horizontal.svg" alt="Clearcut Land Management" className="h-10 w-auto" />
             <span className="text-muted-foreground text-sm">Admin</span>
           </div>
 

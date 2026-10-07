@@ -12,7 +12,7 @@ export default function ServiceDetail() {
   const service = getServiceBySlug(slug || "");
 
   usePageMeta({
-    title: service?.metaTitle || "Service | Brush Boss",
+    title: service?.metaTitle || "Service | Clearcut Land Management",
     description: service?.metaDescription || "Professional land clearing services in Charlotte, NC.",
     canonicalUrl: `/services/${slug}`,
     ogType: "website",
@@ -25,8 +25,8 @@ export default function ServiceDetail() {
           "description": service.description,
           "provider": {
             "@type": "LocalBusiness",
-            "name": "Brush Boss",
-            "telephone": "(704) 608-5783",
+            "name": "Clearcut Land Management",
+            "telephone": "(951) 316-0826",
             "address": { "@type": "PostalAddress", "addressLocality": "Charlotte", "addressRegion": "NC", "addressCountry": "US" }
           },
           "areaServed": { "@type": "City", "name": "Charlotte", "addressRegion": "NC" },
@@ -84,10 +84,10 @@ export default function ServiceDetail() {
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="tel:+17046085783" data-testid="link-service-phone">
+            <a href="tel:+19513160826" data-testid="link-service-phone">
               <Button size="lg" variant="outline" className="gap-2 bg-white/10 backdrop-blur-sm text-white border-white/25">
                 <Phone className="h-4 w-4" />
-                (704) 608-5783
+                (951) 316-0826
               </Button>
             </a>
           </div>

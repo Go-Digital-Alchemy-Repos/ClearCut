@@ -19,7 +19,7 @@ export default function CityLanding() {
   const area = getServiceAreaBySlug(city || "");
 
   usePageMeta({
-    title: area?.metaTitle || "Service Area | Brush Boss",
+    title: area?.metaTitle || "Service Area | Clearcut Land Management",
     description: area?.metaDescription || "Professional land clearing services in the Charlotte, NC area.",
     canonicalUrl: `/areas/${city}`,
     ogType: "website",
@@ -28,8 +28,8 @@ export default function CityLanding() {
       "@graph": [
         {
           "@type": "LocalBusiness",
-          "name": "Brush Boss",
-          "telephone": "(704) 608-5783",
+          "name": "Clearcut Land Management",
+          "telephone": "(951) 316-0826",
           "url": window.location.origin,
           "address": {
             "@type": "PostalAddress",
@@ -256,9 +256,9 @@ export default function CityLanding() {
                     <Phone className="h-4 w-4" /> Request a Free Estimate
                   </Button>
                 </Link>
-                <a href="tel:+17046085783">
+                <a href="tel:+19513160826">
                   <Button size="lg" variant="outline" className="gap-2" data-testid="button-cta-call">
-                    <Phone className="h-4 w-4" /> (704) 608-5783
+                    <Phone className="h-4 w-4" /> (951) 316-0826
                   </Button>
                 </a>
               </div>
@@ -272,7 +272,7 @@ export default function CityLanding() {
           <SectionHeaderPro
             eyebrow="We Also Serve"
             title="Other Areas We Cover"
-            subtitle="Brush Boss provides land clearing throughout the Charlotte metro and surrounding counties."
+            subtitle="Clearcut Land Management provides land clearing throughout the Charlotte metro and surrounding counties."
           />
           <div className="flex flex-wrap justify-center gap-2">
             {SERVICE_AREAS.filter(a => a.slug !== area.slug).map((otherArea) => (

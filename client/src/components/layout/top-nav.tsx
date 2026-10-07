@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, TreePine, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { useSiteSettings } from "@/hooks/use-site-settings";
 
 const services = [
@@ -33,9 +33,12 @@ export function TopNav() {
         <div className="flex items-center justify-between min-h-24 py-2 gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0 py-1" data-testid="link-home-logo">
             {settings.logoUrl ? (
-              <img src={settings.logoUrl} alt={settings.companyName} className="h-20 w-auto object-contain" />
+              <img src={settings.logoUrl} alt={settings.companyName} className="h-12 sm:h-14 w-auto object-contain" />
             ) : (
-              <TreePine className="h-10 w-10 text-primary" />
+              <span className="flex items-center gap-2">
+                <img src="/brand/clearcut-symbol.svg" alt="" className="h-10 w-10" />
+                <span className="font-bold text-lg sm:text-xl leading-tight tracking-tight">{settings.companyName}</span>
+              </span>
             )}
           </Link>
 
@@ -90,9 +93,9 @@ export function TopNav() {
           </div>
 
           <div className="hidden md:flex items-center gap-2">
-            <a href="tel:+17046085783" data-testid="link-call-now">
+            <a href="tel:+19513160826" data-testid="link-call-now">
               <Button variant="outline" className="gap-2">
-                <Phone className="h-4 w-4" /> Call Now (704) 608-5783
+                <Phone className="h-4 w-4" /> Call Now (951) 316-0826
               </Button>
             </a>
             <Link href="/quote">
@@ -143,9 +146,9 @@ export function TopNav() {
               </div>
             ))}
             <div className="pt-2 space-y-2">
-              <a href="tel:+17046085783" className="block" data-testid="mobile-link-call-now">
+              <a href="tel:+19513160826" className="block" data-testid="mobile-link-call-now">
                 <Button variant="outline" className="w-full gap-2">
-                  <Phone className="h-4 w-4" /> Call Now (704) 608-5783
+                  <Phone className="h-4 w-4" /> Call Now (951) 316-0826
                 </Button>
               </a>
               <Link href="/quote" onClick={() => setMobileOpen(false)}>

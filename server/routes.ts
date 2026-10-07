@@ -62,7 +62,6 @@ function invalidateCache(prefix: string) {
 
 import { setupAuth } from "./auth";
 import { registerAiRoutes } from "./ai-routes";
-import { registerAudioRoutes } from "./replit_integrations/audio/routes";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -70,7 +69,6 @@ export async function registerRoutes(
 ): Promise<Server> {
   setupAuth(app);
   registerAiRoutes(app);
-  registerAudioRoutes(app);
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
   });
@@ -344,7 +342,8 @@ export async function registerRoutes(
         res.set("Cache-Control", "public, max-age=60");
         return res.json(cached.data);
       }
-      const settings = await storage.getSiteSettings();
+      // Never expose integration secrets on the public endpoint
+      const { mailgunApiKey, mailgunDomain, chatgptApiKey, ...settings } = await storage.getSiteSettings();
       const etag = setCache(cacheKey, settings, 2 * 60 * 1000);
       res.set("ETag", etag);
       res.set("Cache-Control", "public, max-age=60");

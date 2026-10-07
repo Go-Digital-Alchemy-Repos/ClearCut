@@ -1,9 +1,24 @@
-import { openai } from "./replit_integrations/audio/client";
+import OpenAI from "openai";
 import { type Express } from "express";
+import { requireRole } from "./auth";
+import { storage } from "./storage";
+
+// Prefer the OPENAI_API_KEY env var; fall back to the key saved in admin Settings.
+async function getOpenAI(): Promise<OpenAI | null> {
+  const settings = await storage.getSiteSettings();
+  const apiKey = process.env.OPENAI_API_KEY || settings?.chatgptApiKey;
+  return apiKey ? new OpenAI({ apiKey }) : null;
+}
 
 export function registerAiRoutes(app: Express) {
-  app.post("/api/admin/cms/ai/seo-suggest", async (req, res) => {
+  const cmsAccess = requireRole(["super_admin", "admin", "editor"]);
+
+  app.post("/api/admin/cms/ai/seo-suggest", cmsAccess, async (req, res) => {
     try {
+      const openai = await getOpenAI();
+      if (!openai) {
+        return res.status(503).json({ error: "AI is not configured. Add an OpenAI API key in Settings." });
+      }
       const { title, blocks } = req.body;
       
       // Extract meaningful text from blocks

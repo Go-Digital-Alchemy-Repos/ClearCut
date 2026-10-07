@@ -13,7 +13,7 @@ interface PageMeta {
   twitterCard?: "summary" | "summary_large_image";
 }
 
-const SITE_NAME = "Brush Boss";
+const SITE_NAME = "Clearcut Land Management";
 const BASE_URL = typeof window !== "undefined" ? window.location.origin : "";
 
 function setMetaTag(property: string, content: string, isProperty = false) {
@@ -67,7 +67,8 @@ export function usePageMeta({
     document.title = title;
 
     setMetaTag("description", description);
-    setMetaTag("robots", robots || "index, follow");
+    // Pre-launch: force noindex on every page. Restore `robots || "index, follow"` at launch.
+    setMetaTag("robots", "noindex, nofollow");
 
     setLinkTag("canonical", fullCanonical);
 

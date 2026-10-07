@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SiteSettingsProvider } from "@/hooks/use-site-settings";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { PreviewGate } from "@/components/preview-gate";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
@@ -88,7 +89,9 @@ function App() {
         <SiteSettingsProvider>
           <ScrollToTop />
           <Toaster />
-          <Router />
+          <PreviewGate>
+            <Router />
+          </PreviewGate>
         </SiteSettingsProvider>
       </TooltipProvider>
     </QueryClientProvider>

@@ -82,8 +82,8 @@ export default function ProjectDetail() {
   });
 
   usePageMeta({
-    title: project ? `${project.title}${project.location ? ` - ${project.location}` : ""} | Forestry Boss` : "Project Details | Forestry Boss",
-    description: project?.summary || "View project details from Forestry Boss land clearing portfolio.",
+    title: project ? `${project.title}${project.location ? ` - ${project.location}` : ""} | Clearcut Land Management` : "Project Details | Clearcut Land Management",
+    description: project?.summary || "View project details from Clearcut Land Management land clearing portfolio.",
   });
 
   if (isLoading) {

@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAdminAuth } from "@/hooks/use-admin-auth";
 import {
-  TreePine, LayoutDashboard, Users, FileText, Palette, BookOpen,
+  LayoutDashboard, Users, FileText, Palette, BookOpen,
   LogOut, Loader2, ExternalLink, Menu, X, Shield, ShieldAlert,
   FolderOpen, MessageSquareQuote, ChevronDown, Layout, LayoutGrid,
   ImageIcon, ArrowRightLeft, Search, Settings
@@ -166,8 +166,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         data-testid="admin-sidebar"
       >
         <div className="flex items-center gap-2 px-4 h-14 border-b shrink-0">
-          <TreePine className="h-5 w-5 text-primary" />
-          <span className="font-bold text-sm">Brush Boss</span>
+          <img src="/brand/clearcut-symbol.svg" alt="" className="h-7 w-7" />
+          <span className="font-display font-bold text-lg leading-none tracking-wide uppercase text-primary">Clearcut</span>
           <button
             className="lg:hidden ml-auto p-1"
             onClick={() => setMobileOpen(false)}

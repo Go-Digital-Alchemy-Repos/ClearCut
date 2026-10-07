@@ -100,24 +100,6 @@ export const insertLeadActivitySchema = createInsertSchema(leadActivity).omit({
 export type InsertLeadActivity = z.infer<typeof insertLeadActivitySchema>;
 export type LeadActivity = typeof leadActivity.$inferSelect;
 
-export const conversations = pgTable("conversations", {
-  id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-});
-
-export const messages = pgTable("messages", {
-  id: serial("id").primaryKey(),
-  conversationId: integer("conversation_id").notNull().references(() => conversations.id),
-  role: text("role").notNull(),
-  content: text("content").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-});
-
-export const insertConversationSchema = createInsertSchema(conversations);
-export const insertMessageSchema = createInsertSchema(messages);
-export type Conversation = typeof conversations.$inferSelect;
-export type Message = typeof messages.$inferSelect;
 
 export const POST_STATUSES = ["draft", "published"] as const;
 export type PostStatus = (typeof POST_STATUSES)[number];
@@ -168,14 +150,14 @@ export type BlogPost = typeof blogPosts.$inferSelect;
 
 export const siteSettings = pgTable("site_settings", {
   id: serial("id").primaryKey(),
-  companyName: text("company_name").notNull().default("Forestry Boss"),
-  phone: text("phone").notNull().default("(704) 608-5783"),
-  email: text("email").notNull().default("info@forestryboss.com"),
+  companyName: text("company_name").notNull().default("Clearcut Land Management"),
+  phone: text("phone").notNull().default("(951) 316-0826"),
+  email: text("email").notNull().default("info@clearcutlandmanagement.com"),
   serviceArea: text("service_area").notNull().default("Charlotte, NC & Surrounding Areas"),
-  logoUrl: text("logo_url").notNull().default("/images/logo.png"),
-  primaryColor: text("primary_color").notNull().default("24 97% 46%"),
-  secondaryColor: text("secondary_color").notNull().default("137 38% 21%"),
-  accentColor: text("accent_color").notNull().default("215 15% 45%"),
+  logoUrl: text("logo_url").default("/brand/clearcut-horizontal.svg"),
+  primaryColor: text("primary_color").notNull().default("153 54% 15%"),
+  secondaryColor: text("secondary_color").notNull().default("42 52% 43%"),
+  accentColor: text("accent_color").notNull().default("150 4% 18%"),
   fontFamily: text("font_family").notNull().default("Inter"),
   ctaText: text("cta_text").notNull().default("Get a Fast Quote"),
   socialFacebook: text("social_facebook"),

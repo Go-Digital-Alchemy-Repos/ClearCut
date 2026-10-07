@@ -106,13 +106,13 @@ const faqs = [
 
 export default function Pricing() {
   usePageMeta({
-    title: "Pricing | Brush Boss Charlotte, NC",
+    title: "Pricing | Clearcut Land Management Charlotte, NC",
     description: "Simple pricing options for brush removal, forestry mulching, and land clearing in the Charlotte area. Choose hourly, half-day, full-day, or by-the-acre options. Get a fast quote.",
     canonicalUrl: "/pricing",
     jsonLd: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "PriceSpecification",
-      "name": "Brush Boss Pricing",
+      "name": "Clearcut Land Management Pricing",
       "description": "Pricing tiers for forestry mulching and land clearing services in Charlotte, NC.",
       "priceCurrency": "USD",
       "url": `${window.location.origin}/pricing`
@@ -134,7 +134,7 @@ export default function Pricing() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight" data-testid="text-pricing-title">
             Simple, Straightforward
             <br />
-            <span className="text-primary">Pricing</span>
+            <span className="text-gold">Pricing</span>
           </h1>
           <p className="mt-4 text-gray-200 max-w-2xl mx-auto text-lg">
             Your quote confirms exact pricing for your specific property. No surprises.
@@ -265,10 +265,10 @@ export default function Pricing() {
                 Get a Fast Quote <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="tel:+17046085783" data-testid="link-pricing-phone">
+            <a href="tel:+19513160826" data-testid="link-pricing-phone">
               <Button size="lg" variant="outline" className="gap-2 text-base bg-white/10 backdrop-blur-sm text-white border-white/25">
                 <Phone className="h-4 w-4" />
-                (704) 608-5783
+                (951) 316-0826
               </Button>
             </a>
           </div>

@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Palette, Loader2, Save, TreePine, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Palette, Loader2, Save, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -55,13 +55,13 @@ export default function AdminBranding() {
   });
 
   const [form, setForm] = useState({
-    companyName: "Forestry Boss",
-    phone: "(704) 608-5783",
-    email: "info@forestryboss.com",
+    companyName: "Clearcut Land Management",
+    phone: "(951) 316-0826",
+    email: "info@clearcutlandmanagement.com",
     serviceArea: "Charlotte, NC & Surrounding Areas",
-    logoUrl: "/images/logo.png",
-    primaryColor: "#e76003",
-    secondaryColor: "#21492c",
+    logoUrl: "/brand/clearcut-horizontal.svg",
+    primaryColor: "#123D2A",
+    secondaryColor: "#A88635",
     fontFamily: "Inter",
     ctaText: "Get a Fast Quote",
     socialFacebook: "",
@@ -213,19 +213,19 @@ export default function AdminBranding() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="socialFacebook">Facebook URL</Label>
-                    <Input id="socialFacebook" value={form.socialFacebook} onChange={e => update("socialFacebook", e.target.value)} placeholder="https://facebook.com/brushboss" data-testid="input-social-facebook" />
+                    <Input id="socialFacebook" value={form.socialFacebook} onChange={e => update("socialFacebook", e.target.value)} placeholder="https://facebook.com/clearcutlandmanagement" data-testid="input-social-facebook" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="socialInstagram">Instagram URL</Label>
-                    <Input id="socialInstagram" value={form.socialInstagram} onChange={e => update("socialInstagram", e.target.value)} placeholder="https://instagram.com/brushboss" data-testid="input-social-instagram" />
+                    <Input id="socialInstagram" value={form.socialInstagram} onChange={e => update("socialInstagram", e.target.value)} placeholder="https://instagram.com/clearcutlandmanagement" data-testid="input-social-instagram" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="socialYoutube">YouTube URL</Label>
-                    <Input id="socialYoutube" value={form.socialYoutube} onChange={e => update("socialYoutube", e.target.value)} placeholder="https://youtube.com/@brushboss" data-testid="input-social-youtube" />
+                    <Input id="socialYoutube" value={form.socialYoutube} onChange={e => update("socialYoutube", e.target.value)} placeholder="https://youtube.com/@clearcutlandmanagement" data-testid="input-social-youtube" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="socialGoogle">Google Business URL</Label>
-                    <Input id="socialGoogle" value={form.socialGoogle} onChange={e => update("socialGoogle", e.target.value)} placeholder="https://g.page/brushboss" data-testid="input-social-google" />
+                    <Input id="socialGoogle" value={form.socialGoogle} onChange={e => update("socialGoogle", e.target.value)} placeholder="https://g.page/clearcutlandmanagement" data-testid="input-social-google" />
                   </div>
                 </div>
               </CardContent>
@@ -239,9 +239,9 @@ export default function AdminBranding() {
                 <div className="border rounded-md overflow-hidden">
                   <div className="p-3 border-b flex items-center gap-2" style={{ backgroundColor: `hsl(${hexToHsl(form.primaryColor)})` }}>
                     {form.logoUrl ? (
-                      <img src={form.logoUrl} alt="Logo" className="h-6 w-6 object-contain" />
+                      <img src={form.logoUrl} alt="Logo" className="h-8 w-auto max-w-[60%] object-contain rounded bg-white px-1.5 py-1" />
                     ) : (
-                      <TreePine className="h-5 w-5 text-white" />
+                      <img src="/brand/clearcut-symbol.svg" alt="" className="h-6 w-6 rounded bg-white p-0.5" />
                     )}
                     <span className="font-bold text-sm text-white" style={{ fontFamily: form.fontFamily }}>
                       {form.companyName}
